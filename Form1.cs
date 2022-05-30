@@ -38,12 +38,6 @@ namespace W14_Praktikum
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtTeam);
             DataMantap(currentPosition);
-
-            
-            
-
-            
-
         }
         
         
@@ -97,12 +91,17 @@ namespace W14_Praktikum
                 MessageBox.Show("Data sudah paling awal!");
                 
             }
+            else
+            {
+                currentPosition--;
+
+            }
             DataMantap(currentPosition);
         }
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            currentPosition++;
+            
             
             
             if (currentPosition > dtTeam.Rows.Count - 1)
@@ -110,6 +109,11 @@ namespace W14_Praktikum
                 currentPosition = dtTeam.Rows.Count - 1;
                 MessageBox.Show("Data sudah paling akhir!");
                 
+            }
+            else
+            {
+                currentPosition++;
+
             }
             DataMantap(currentPosition);
         }
