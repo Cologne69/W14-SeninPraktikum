@@ -79,7 +79,9 @@ namespace W14_Praktikum
         {
             currentPosition = 0;
             DataMantap(currentPosition);
-            DataTable DGV = new DataTable();
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+
 
         }
 
@@ -95,10 +97,13 @@ namespace W14_Praktikum
             else
             {
                 currentPosition--;
-                DataTable DGV = new DataTable();
+                DataMantap(currentPosition);
+                dataGridView1.Update();
+                dataGridView1.Refresh();
+
 
             }
-            DataMantap(currentPosition);
+            
         }
 
         private void btn_next_Click(object sender, EventArgs e)
@@ -115,17 +120,23 @@ namespace W14_Praktikum
             else
             {
                 currentPosition++;
-                DataTable DGV = new DataTable();
+                DataMantap(currentPosition);
+                dataGridView1.Update();
+                dataGridView1.Refresh();
+
 
             }
-            DataMantap(currentPosition);
+            
+            
         }
 
         private void btn_begin_Click(object sender, EventArgs e)
         {
             currentPosition = dtTeam.Rows.Count - 1;
             DataMantap(currentPosition);
-            DataTable DGV = new DataTable();
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+
         }
 
         private void lbl_SIUUUU_Click(object sender, EventArgs e)
